@@ -2,7 +2,7 @@
 title: 'Workshop Summary'
 description: 'GreenShill 1'
 pubDate: 'Nov 12 2024'
-heroImage: '/blog-placeholder-2.jpg'
+heroImage: '/greenshill/blog-placeholder-2.jpg'
 ---
 
 A GreenShill post in markdown...

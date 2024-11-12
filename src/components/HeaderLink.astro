@@ -6,11 +6,13 @@ type Props = HTMLAttributes<'a'>;
 const { href, class: className, ...props } = Astro.props;
 
 const { pathname } = Astro.url;
-const subpath = pathname.match(/[^\/]+/g);
-const isActive = href === pathname || href === '/' + subpath?.[0];
+const [, subpath] = Array.from(pathname.match(/\/greenshill\/?([^\/]*)/) ?? []);
+const active = href === pathname || href?.toString().startsWith(`/greenshill/${subpath}`);
+// console.log({isActive, href, subpath, pathname})
+console.log({href, pathname, active})
 ---
 
-<a href={href} class:list={[className, { active: isActive }]} {...props}>
+<a href={href} class:list={[className, { active }]} {...props}>
 	<slot />
 </a>
 <style>
