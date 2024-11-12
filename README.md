@@ -5,7 +5,7 @@ pnpm dev
 
 ## 👀 Want to learn more?
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Check out [Astro docs](https://docs.astro.build)
 
 ## Credit
 
