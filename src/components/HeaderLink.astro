@@ -7,7 +7,13 @@ const { href, class: className, ...props } = Astro.props;
 
 const { pathname } = Astro.url;
 const [, subpath] = Array.from(pathname.match(/\/greenshill\/?([^\/]*)/) ?? []);
-const active = href === pathname || href?.toString().startsWith(`/greenshill/${subpath}`);
+const active = (
+	subpath === '' ? (
+		/^\/greenshill\/?$/.test(href?.toString() ?? '')
+	) : (
+		href?.toString().startsWith(`/greenshill/${subpath}`)
+	)
+)
 // console.log({isActive, href, subpath, pathname})
 console.log({href, pathname, active})
 ---
