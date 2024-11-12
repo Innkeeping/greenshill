@@ -4,41 +4,45 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
-:root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
+ :root {
+	--accent: #6bc80b;
+	--accent-dark: #254d32;
 	--black: 15, 18, 25;
 	--gray: 96, 115, 159;
 	--gray-light: 229, 233, 240;
 	--gray-dark: 34, 41, 57;
 	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
+	--box-shadow: 0 2px 6px rgba(255, 218, 112, 0.25), 0 8px 24px rgba(255, 218, 112, 0.33),
+			0 16px 32px rgba(255, 218, 112, 0.33);
 }
 @font-face {
-	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-regular.woff') format('woff');
+	font-family: 'Volkhov, serif';
+	src: url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
-	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-bold.woff') format('woff');
+	font-family: 'Volkhov, serif';
+	src: url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
 body {
-	font-family: 'Atkinson', sans-serif;
+	font-family: 'Volkhov, serif';
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
+	background:
+		url('/greenpill-bg.png'),
+    linear-gradient(to bottom, #254d32, #254d32);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
+	color: #fff;
 	font-size: 20px;
 	line-height: 1.7;
 }
@@ -55,7 +59,7 @@ h4,
 h5,
 h6 {
 	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
+	color: whitesmoke;
 	line-height: 1.2;
 }
 h1 {
